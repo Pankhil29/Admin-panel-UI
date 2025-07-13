@@ -2,8 +2,7 @@ import React from "react";
 
 function Navbar1() {
   return (
-    
-    <nav className="navbar navbar-expand navbr-light bg-white px-4 shadow-sm">
+    <nav className="navbar navbar-expand navbar-light bg-white px-4 shadow-sm">
       <div className="d-flex align-items-center w-100 justify-content-between">
         <div className="d-flex align-items-center">
           <input
@@ -13,6 +12,7 @@ function Navbar1() {
             style={{ width: "250px" }}
           />
         </div>
+
         <div className="d-flex align-items-center gap-3">
           <span className="position-relative">
             🔔
