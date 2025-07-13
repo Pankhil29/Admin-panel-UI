@@ -2,6 +2,7 @@ import React from "react";
 
 function Navbar1() {
   return (
+    
     <nav className="navbar navbar-expand navbr-light bg-white px-4 shadow-sm">
       <div className="d-flex align-items-center w-100 justify-content-between">
         <div className="d-flex align-items-center">

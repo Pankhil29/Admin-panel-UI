@@ -4,7 +4,7 @@ import "../css/Sidebar.css";
 const Sidebar = ({ collapsed, toggleSidebar }) => {
   return (
     <div
-      className="sidebar bg-dark text-white p-3 d-flex flex-column justify-content-between"
+      className={`sidebar bg-dark text-white p-3 d-none d-md-block`}
       style={{
         width: collapsed ? "80px" : "250px",
         height: "100vh",
