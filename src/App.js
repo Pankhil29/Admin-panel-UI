@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Dashboard from "./pages/Dashboard";
+import Navbar1 from "./components/Navbar1";
 
 function App() {
+  const [collapsed, setCollapsed] = useState(false);
+  const toggleSidebar = () => setCollapsed(!collapsed);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <HashRouter>
+      <div className="d-flex">
+        <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} />
+        <div
+          className="flex-grow-1 p-3"
+          style={{ background: "#f8f9fa", minHeight: "100vh" }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Navbar1 />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+          </Routes>
+        </div>
+      </div>
+    </HashRouter>
   );
 }
 
